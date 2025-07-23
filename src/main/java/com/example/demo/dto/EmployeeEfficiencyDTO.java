@@ -1,22 +1,22 @@
 package com.example.demo.dto;
 
 public class EmployeeEfficiencyDTO {
-    private String empCode;
-    private String empName;
-    private String deptName;
-    private Double baseSalary;
-    private int totalWorkDays;
-    private Double standardWorkHours;
-    private Double actualWorkHours;
-    private Double overtimeHours;
-    private Double efficiencyRate;
-    private Double overtimeRate;
-    private Double overtimePay;
-    private Double totalPay;
-    private int lateDays;
-    private int earlyLeaveDays;
-    private int absentDays;
-    private Double averageWorkHoursPerDay;
+    private String empCode;// 员工工号
+    private String empName;// 员工姓名
+    private String deptName;// 部门名称
+    private Double baseSalary;// 基本薪资
+    private int totalWorkDays;// 总工作天数
+    private Double standardWorkHours;// 标准工作时长
+    private Double actualWorkHours;// 实际工作时长
+    private Double overtimeHours;// 加班时长
+    private Double efficiencyRate;// 效率
+    private Double overtimeRate;// 加班率
+    private Double overtimePay;// 加班费
+    private Double totalPay;// 总薪资
+    private int lateDays;// 迟到天数
+    private int earlyLeaveDays;// 早退天数
+    private int absentDays;// 缺勤天数
+    private Double averageWorkHoursPerDay;// 平均工作时长
 
     public String getEmpCode() {
         return empCode;

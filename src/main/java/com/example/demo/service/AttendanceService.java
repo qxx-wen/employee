@@ -27,6 +27,7 @@ public class AttendanceService {
     @Autowired
     private DepartmentsMapper departmentsMapper;
 
+    // 查询考勤记录
     public List<AttendanceRecords> queryAttendanceRecords(String yearMonth, Integer empId) {
         LambdaQueryWrapper<AttendanceRecords> wrapper = new LambdaQueryWrapper<>();
         if (yearMonth != null && !yearMonth.isEmpty()) {
@@ -38,18 +39,7 @@ public class AttendanceService {
         return attendanceRecordsMapper.selectList(wrapper);
     }
 
-    public IPage<AttendanceRecords> queryAttendanceRecordsPage(String yearMonth, Integer empId, int pageNum, int pageSize) {
-        LambdaQueryWrapper<AttendanceRecords> wrapper = new LambdaQueryWrapper<>();
-        if (yearMonth != null && !yearMonth.isEmpty()) {
-            wrapper.apply("to_char(attendance_date, 'YYYY-MM') = {0}", yearMonth);
-        }
-        if (empId != null) {
-            wrapper.eq(AttendanceRecords::getEmpId, empId);
-        }
-        Page<AttendanceRecords> page = new Page<>(pageNum, pageSize);
-        return attendanceRecordsMapper.selectPage(page, wrapper);
-    }
-
+    // 查询考勤异常员工
     public List<AttendanceAnomalyDTO> queryAttendanceAnomalies(String yearMonth, String anomalyType, int threshold) {
         final int type;
         if ("迟到".equals(anomalyType)) type = 1;

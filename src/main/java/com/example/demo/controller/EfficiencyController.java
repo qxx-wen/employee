@@ -37,7 +37,7 @@ public class EfficiencyController {
      * @param standardWorkHoursPerDay 标准每日工时
      * @return 部门效率对比列表
      */
-    @GetMapping("/department")
+    @GetMapping("/department")  // 场景八：动态统计分析 - 部门效率对比
     public List<DepartmentOverviewDTO> getDepartmentEfficiencyComparison(
             @RequestParam String yearMonth,
             @RequestParam double standardWorkHoursPerDay) {

@@ -1,16 +1,16 @@
 package com.example.demo.dto;
 
 public class AttendanceRecordDTO {
-    private String empCode;
-    private String empName;
-    private String checkInTime;
-    private String checkOutTime;
-    private String status;
-    private String attendanceDate;
-    private Double workHours;
-    private Integer lateMinutes;
-    private Integer earlyLeaveMinutes;
-    private Integer absenceType;
+    private String empCode;// 员工工号
+    private String empName;// 员工姓名
+    private String checkInTime;// 上班时间
+    private String checkOutTime;// 下班时间
+    private String status;// 状态
+    private String attendanceDate;// 考勤日期
+    private Double workHours;// 工作时长
+    private Integer lateMinutes;// 迟到分钟数
+    private Integer earlyLeaveMinutes;// 早退分钟数
+    private Integer absenceType;// 缺勤类型
 
     // 构造函数
     public AttendanceRecordDTO() {}

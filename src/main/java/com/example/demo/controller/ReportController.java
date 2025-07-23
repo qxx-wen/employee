@@ -30,6 +30,7 @@ public class ReportController {
         return reportService.generateDepartmentAttendanceReport(deptId, yearMonth);
     }
 
+    // 场景八：动态统计分析 - 部门效率对比
     @Operation(summary = "部门效率对比")
     @GetMapping("/department-efficiency")
     public List<DepartmentOverviewDTO> getDepartmentEfficiencyComparison(

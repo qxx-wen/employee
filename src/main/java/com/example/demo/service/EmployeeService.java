@@ -45,6 +45,7 @@ public class EmployeeService {
         return result;
     }
 
+    // 查询员工基本信息
     public EmployeeBasicInfoDTO queryEmployeeBasicInfo(String empCode) {
         Employees emp = employeesMapper.selectOne(Wrappers.<Employees>lambdaQuery().eq(Employees::getEmpCode, empCode));
         if (emp == null) return null;
@@ -73,6 +74,7 @@ public class EmployeeService {
         return dto;
     }
 
+    // 查询考勤统计
     private AttendanceStatisticsDTO queryAttendanceStatistics(String empCode, String yearMonth) {
         Employees emp = employeesMapper.selectOne(Wrappers.<Employees>lambdaQuery().eq(Employees::getEmpCode, empCode));
         if (emp == null) return new AttendanceStatisticsDTO();
@@ -103,6 +105,7 @@ public class EmployeeService {
         return dto;
     }
 
+    // 查询薪资明细
     private SalaryDetailDTO querySalaryDetail(String empCode, String yearMonth) {
         Employees emp = employeesMapper.selectOne(Wrappers.<Employees>lambdaQuery().eq(Employees::getEmpCode, empCode));
         if (emp == null) return null;
@@ -127,6 +130,7 @@ public class EmployeeService {
         return dto;
     }
 
+    // 计算绩效评分
     private PerformanceRatingDTO calculatePerformanceRating(AttendanceStatisticsDTO stats) {
         int totalDays = stats.getTotalDays();
         int lateDays = stats.getLateDays();

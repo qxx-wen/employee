@@ -3,13 +3,13 @@ package com.example.demo.dto;
 import java.time.LocalDate;
 
 public class AttendanceAnomalyDetailDTO {
-    private String empCode;
-    private String empName;
-    private LocalDate date;
-    private String checkInTime;
-    private String checkOutTime;
-    private String anomalyType;
-    private String description;
+    private String empCode;// 员工工号
+    private String empName;// 员工姓名
+    private LocalDate date;// 日期
+    private String checkInTime;// 上班时间
+    private String checkOutTime;// 下班时间
+    private String anomalyType;// 异常类型
+    private String description;// 异常描述
 
     // 构造函数
     public AttendanceAnomalyDetailDTO() {}

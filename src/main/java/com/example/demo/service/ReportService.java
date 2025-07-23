@@ -25,6 +25,7 @@ public class ReportService {
     @Autowired
     private AttendanceRecordsMapper attendanceRecordsMapper;
 
+    // 生成部门考勤报告
     public DepartmentAttendanceReportDTO generateDepartmentAttendanceReport(int deptId, String yearMonth) {
         DepartmentAttendanceReportDTO dto = new DepartmentAttendanceReportDTO();
         Departments dept = departmentsMapper.selectById(deptId);
@@ -36,12 +37,14 @@ public class ReportService {
         return dto;
     }
 
+    // 获取部门员工数量
     private int getDepartmentEmployeeCount(int deptId) {
         return employeesMapper.selectCount(new LambdaQueryWrapper<Employees>()
                 .eq(Employees::getDeptId, deptId)
                 .eq(Employees::getEmploymentStatus, 1)).intValue();
     }
 
+    // 获取部门考勤统计
     private AttendanceStatisticsDTO getDepartmentAttendanceStats(int deptId, String yearMonth) {
         List<Employees> emps = employeesMapper.selectList(new LambdaQueryWrapper<Employees>()
                 .eq(Employees::getDeptId, deptId)
@@ -81,6 +84,7 @@ public class ReportService {
         return dto;
     }
 
+    // 获取员工考勤明细
     private List<EmployeeAttendanceDetailDTO> getEmployeeAttendanceList(int deptId, String yearMonth) {
         List<Employees> emps = employeesMapper.selectList(new LambdaQueryWrapper<Employees>()
                 .eq(Employees::getDeptId, deptId)
@@ -108,6 +112,7 @@ public class ReportService {
         }).collect(Collectors.toList());
     }
 
+    // 生成部门效率对比报告
     public List<DepartmentOverviewDTO> generateDepartmentEfficiencyComparison(String yearMonth) {
         List<Departments> depts = departmentsMapper.selectList(null);
         return depts.stream().map(dept -> {
@@ -133,7 +138,6 @@ public class ReportService {
             dto.setTotalWorkHours(totalWorkHours);
             dto.setTotalOvertimeHours(overtimeHours);
             dto.setAvgWorkHoursPerDay(avgWorkHoursPerDay);
-            // 这里效率率、加班率等可根据实际业务需求补充
             return dto;
         }).collect(Collectors.toList());
     }

@@ -1,16 +1,16 @@
 package com.example.demo.dto;
 
 public class EmployeeAttendanceDetailDTO {
-    private String empCode;
-    private String empName;
-    private String attendanceDate;
-    private String checkInTime;
-    private String checkOutTime;
-    private Integer lateMinutes;
-    private Integer earlyLeaveMinutes;
-    private Integer absenceType;
-    private Double workHours;
-    private String remarks;
+    private String empCode;// 员工工号
+    private String empName;// 员工姓名
+    private String attendanceDate;// 考勤日期
+    private String checkInTime;// 上班时间
+    private String checkOutTime;// 下班时间
+    private Integer lateMinutes;// 迟到分钟数
+    private Integer earlyLeaveMinutes;// 早退分钟数
+    private Integer absenceType;// 缺勤类型
+    private Double workHours;// 工作时长
+    private String remarks;// 备注
 
     public String getEmpCode() { return empCode; }
     public void setEmpCode(String empCode) { this.empCode = empCode; }

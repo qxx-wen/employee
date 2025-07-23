@@ -5,7 +5,7 @@ import com.example.demo.entity.AttendanceRecords;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 
-@Mapper
+@Mapper 
 public interface AttendanceRecordsMapper extends BaseMapper<AttendanceRecords> {
     @Select("SELECT 1")
     int testSelect();

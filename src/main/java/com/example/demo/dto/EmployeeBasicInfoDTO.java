@@ -1,20 +1,20 @@
 package com.example.demo.dto;
 
 public class EmployeeBasicInfoDTO {
-    private String empCode;
-    private String empName;
-    private String gender;
-    private String birthDate;
-    private String phone;
-    private String email;
-    private String position;
-    private String level;
-    private String hireDate;
-    private String contractType;
-    private String employmentStatus;
-    private Double baseSalary;
-    private String deptName;
-    private String deptCode;
+    private String empCode;// 员工工号
+    private String empName;// 员工姓名
+    private String gender;// 性别
+    private String birthDate;// 出生日期
+    private String phone;// 电话
+    private String email;// 邮箱
+    private String position;// 职位
+    private String level;// 级别
+    private String hireDate;// 入职日期
+    private String contractType;// 合同类型
+    private String employmentStatus;// 就业状态
+    private Double baseSalary;// 基本薪资
+    private String deptName;// 部门名称
+    private String deptCode;// 部门代码
 
     public String getEmpCode() {
         return empCode;

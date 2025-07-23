@@ -1,16 +1,16 @@
 package com.example.demo.dto;
 
 public class AttendanceStatisticsDTO {
-    private int totalDays;
-    private int completeDays;
-    private int lateDays;
-    private int earlyLeaveDays;
-    private int absenceDays;
-    private Double totalWorkHours;
-    private Double totalOvertimeHours;
-    private int totalLateMinutes;
-    private int totalEarlyLeaveMinutes;
-    private double attendanceRate;
+    private int totalDays;// 总天数
+    private int completeDays;// 正常出勤天数
+    private int lateDays;// 迟到天数
+    private int earlyLeaveDays;// 早退天数
+    private int absenceDays;// 缺勤天数
+    private Double totalWorkHours;// 总工作时长
+    private Double totalOvertimeHours;// 总加班时长
+    private int totalLateMinutes;// 总迟到分钟数
+    private int totalEarlyLeaveMinutes;// 总早退分钟数
+    private double attendanceRate;// 出勤率
     private Double averageWorkHours; // 平均工作时长
     private Double lateRate;         // 迟到率
     private int leaveDays;           // 请假天数

@@ -1,11 +1,11 @@
 package com.example.demo.dto;
 
 public class PerformanceRatingDTO {
-    private String ratingLevel;
-    private Double ratingScore;
-    private String evaluationDate;
-    private String evaluator;
-    private String comments;
+    private String ratingLevel;// 评分等级
+    private Double ratingScore;// 评分分数
+    private String evaluationDate;// 评价日期
+    private String evaluator;// 评价人
+    private String comments;// 评价内容
 
     public String getRatingLevel() {
         return ratingLevel;

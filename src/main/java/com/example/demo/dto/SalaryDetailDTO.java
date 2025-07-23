@@ -1,19 +1,19 @@
 package com.example.demo.dto;
 
 public class SalaryDetailDTO {
-    private String salaryMonth;
-    private Double baseSalary;
-    private Double overtimePay;
-    private Double bonus;
-    private Double allowance;
-    private Double deduction;
-    private Double socialInsurance;
-    private Double housingFund;
-    private Double tax;
-    private Double netSalary;
-    private String payStatus;
-    private String payDate;
-    private String remarks;
+    private String salaryMonth;// 薪资月份
+    private Double baseSalary;// 基本薪资
+    private Double overtimePay;// 加班费
+    private Double bonus;// 奖金
+    private Double allowance;// 津贴
+    private Double deduction;// 扣除
+    private Double socialInsurance;// 社保
+    private Double housingFund;// 公积金
+    private Double tax;// 税
+    private Double netSalary;// 净薪资
+    private String payStatus;// 支付状态
+    private String payDate;// 支付日期
+    private String remarks;// 备注
 
     public String getSalaryMonth() {
         return salaryMonth;

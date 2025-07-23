@@ -4,11 +4,11 @@ import java.util.List;
 import com.example.demo.dto.AttendanceStatisticsDTO;
 
 public class DepartmentAttendanceReportDTO {
-    private String deptName;
-    private int deptId;
-    private int totalEmployees;
-    private AttendanceStatisticsDTO attendanceStats;
-    private List<EmployeeAttendanceDetailDTO> employeeAttendanceList;
+    private String deptName;// 部门名称
+    private int deptId;// 部门ID
+    private int totalEmployees;// 员工总数
+    private AttendanceStatisticsDTO attendanceStats;// 考勤统计
+    private List<EmployeeAttendanceDetailDTO> employeeAttendanceList;// 员工考勤明细
 
     public String getDeptName() {
         return deptName;

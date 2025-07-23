@@ -3,11 +3,11 @@ package com.example.demo.dto;
 import java.util.List;
 
 public class AttendanceAnomalyDTO {
-    private String empCode;
-    private String empName;
-    private String anomalyType;
-    private int anomalyCount;
-    private String yearMonth;
+    private String empCode;// 员工工号
+    private String empName;// 员工姓名
+    private String anomalyType;// 异常类型
+    private int anomalyCount;// 异常次数
+    private String yearMonth;// 年月
 
     // 构造函数
     public AttendanceAnomalyDTO() {}

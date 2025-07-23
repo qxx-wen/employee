@@ -2,28 +2,28 @@ package com.example.demo.dto;
 
 public class DepartmentOverviewDTO {
     // 基础信息
-    private String deptName;
-    private Integer deptId;
+    private String deptName;// 部门名称
+    private Integer deptId;// 部门ID
     // 层级信息
-    private Integer level;
-    private Integer depth;
+    private Integer level;// 层级
+    private Integer depth;// 深度
     // 人员统计
-    private Integer employeeCount;
-    private Integer totalEmployees;
+    private Integer employeeCount; // 员工数量
+    private Integer totalEmployees;// 总员工数量
     // 薪资统计
-    private Double avgSalary;
-    private Double maxSalary;
-    private Double minSalary;
+    private Double avgSalary;// 平均薪资
+    private Double maxSalary;// 最高薪资
+    private Double minSalary;// 最低薪资
     // 效率统计
-    private Double totalWorkHours;
-    private Double totalOvertimeHours;
-    private Double avgWorkHoursPerDay;
-    private Double efficiencyRate;
-    private Double overtimeRate;
+    private Double totalWorkHours;// 总工作时长
+    private Double totalOvertimeHours;// 总加班时长
+    private Double avgWorkHoursPerDay;// 平均工作时长
+    private Double efficiencyRate;// 效率率
+    private Double overtimeRate;// 加班率
     // 异常统计
-    private Integer anomalyEmployees;
-    private Integer totalAnomalies;
-    private Double anomalyRate;
+    private Integer anomalyEmployees;// 异常员工数量
+    private Integer totalAnomalies;// 总异常次数
+    private Double anomalyRate;// 异常率
 
     // getter/setter
     public String getDeptName() { return deptName; }

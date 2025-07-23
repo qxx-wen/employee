@@ -50,7 +50,7 @@ public class DepartmentService {
         }).collect(Collectors.toList());
     }
 
-    // 部门层级结构统计（只做简单层级，复杂递归建议用自定义XML或数据库视图）
+    // 部门层级结构统计
     public List<DepartmentOverviewDTO> queryDepartmentHierarchyStats() {
         List<Departments> depts = departmentsMapper.selectList(null);
         return depts.stream().map(dept -> {
@@ -58,7 +58,6 @@ public class DepartmentService {
             dto.setDeptName(dept.getDeptName());
             dto.setDeptId(dept.getId());
             dto.setLevel(dept.getLevel());
-            // 可扩展：计算depth
             List<Employees> emps = employeesMapper.selectList(
                 new LambdaQueryWrapper<Employees>()
                     .eq(Employees::getDeptId, dept.getId())
@@ -69,7 +68,7 @@ public class DepartmentService {
         }).collect(Collectors.toList());
     }
 
-    // 部门考勤异常统计（简单实现，复杂统计建议用自定义XML）
+    // 部门考勤异常统计
     public List<DepartmentOverviewDTO> queryDepartmentAnomalyStats(String yearMonth, int threshold) {
         List<Departments> depts = departmentsMapper.selectList(null);
         return depts.stream().map(dept -> {

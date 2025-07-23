@@ -1,12 +1,12 @@
 package com.example.demo.dto;
 
 public class EmployeeHistoryDTO {
-    private String recordType;
-    private String effectiveDate;
-    private String reason;
-    private String position;
-    private Double salary;
-    private String remarks;
+    private String recordType;// 记录类型
+    private String effectiveDate;// 生效日期
+    private String reason;// 原因
+    private String position;// 职位
+    private Double salary;// 薪资
+    private String remarks;// 备注
 
     public String getRecordType() {
         return recordType;
